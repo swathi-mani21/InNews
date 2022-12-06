@@ -2,18 +2,23 @@ version: 0.2
 
 phases:
   install:
-    runtime-versions:
-      java: corretto11
-  pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+        - python -m pip install Flask
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - echo Compiling the Python code...
+      - python test_app.py
   post_build:
     commands:
       - echo Build completed on `date`
 artifacts:
   files:
-    - target/messageUtil-1.0.jar
+    - App.py
+    - appspec.yml
+    - templates/layout.html
+    - templates/test.html
+    - scripts/mkdir.sh
+    - scripts/start_flask.sh
+    - scripts/stop_flask1.sh
+    - scripts/stop_flask.py
