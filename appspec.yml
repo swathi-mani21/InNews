@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-northeast-1:068992237748:pyweb:1"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:979882373351:task-definition/pyt-task:1"
         LoadBalancerInfo:
-          ContainerName: "mycont"
+          ContainerName: "pyth-con"
           ContainerPort: 8501
