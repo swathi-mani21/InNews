@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-northeast-1:068992237748:pyweb:1"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:979882373351:task-definition/cicd-jul:1"
         LoadBalancerInfo:
-          ContainerName: "mycont"
+          ContainerName: "julcon"
           ContainerPort: 8501
