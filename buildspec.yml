@@ -21,7 +21,7 @@ phases:
       - python App.py sdist bdist_wheel
   post_build:
     commands:
-      - printf '[{"name":"julcon","imageUri":"979882373351.dkr.ecr.ap-south-1.amazonaws.com/pyth-repo"}]' > imagedefinitions.json
+      - printf '[{"name":"pyth-con","imageUri":"979882373351.dkr.ecr.ap-south-1.amazonaws.com/pyth-repo"}]' > imagedefinitions.json
 artifacts:
     files: imagedefinitions.json
 #artifacts:
